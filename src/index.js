@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import 'bootstrap/dist/css/bootstrap.css';
 import reportWebVitals from './reportWebVitals';
+import Comments from './components/comments';
+import CommentForm from './components/commentForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <div className="container">
+    <div className="row d-flex justify-content-center">
+      <div className="col-lg-5">
+          <div><br/><br/></div>
+          <CommentForm />
+          <div><br /><br /></div>
+          <Comments />
+      </div>
+    </div>
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function
